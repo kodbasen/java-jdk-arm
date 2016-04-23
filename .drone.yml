@@ -1,0 +1,15 @@
+clone:
+  environment:
+  - GIT_SSL_NO_VERIFY=true
+publish:
+  docker:
+    environment:
+    - DOCKER_LAUNCH_DEBUG=true
+    file: Dockerfile
+    username: $$DOCKER_USERNAME
+    password: $$DOCKER_PWD
+    email: lars.mogren@gmail.com
+    repo: kodbasen/java-jdk-armhf
+    tag:
+    - "jdk-8u73-b02"
+    - latest
