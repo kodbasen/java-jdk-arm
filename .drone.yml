@@ -11,5 +11,5 @@ publish:
     email: lars.mogren@gmail.com
     repo: kodbasen/java-jdk-armhf
     tag:
-    - "jdk-8u73-b02"
+    - "jdk-8u91-b14"
     - latest

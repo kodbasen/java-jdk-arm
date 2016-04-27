@@ -4,8 +4,8 @@ MAINTAINER larmog <larmog@kodbasen.org>
 
 # Set environment
 ENV JAVA_VERSION=8 \
-    JAVA_UPDATE=73 \
-    JAVA_BUILD=02 \
+    JAVA_UPDATE=91 \
+    JAVA_BUILD=14 \
     JAVA_HOME="/opt/jdk" \
     PATH=$PATH:${PATH}:/opt/jdk/bin \
     JAVA_OPTS="-server"
@@ -45,6 +45,3 @@ RUN apk update && \
        $JAVA_HOME/jre/bin/unpack200 && \
   apk del wget ca-certificates && \
   rm -rf /var/cache/apk/*
-
-ENTRYPOINT ["java"]
-CMD ["-server", "-version"]
