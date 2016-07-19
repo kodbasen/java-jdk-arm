@@ -1,6 +1,6 @@
-FROM kodbasen/ubuntu-slim-armhf:0.2
+FROM kodbasen/ubuntu-slim-armhf:0.3
 
-MAINTAINER larmog <larmog@kodbasen.org>
+MAINTAINER larmog https://github.com/larmog
 
 ENV DEBIAN_FRONTEND noninteractive
 
@@ -13,10 +13,6 @@ ENV JAVA_VERSION=8 \
     JAVA_OPTS="-server"
 
 # Download and install Java
-#RUN apt-get -y update && \
-#  apt-get install -y wget ca-certificates && \
-#  wget -q --header "Cookie: oraclelicense=accept-securebackup-cookie;" "http://download.oracle.com/otn-pub/java/jdk/${JAVA_VERSION}u${JAVA_UPDATE}-b${JAVA_BUILD}/jdk-${JAVA_VERSION}u${JAVA_UPDATE}-linux-arm32-vfp-hflt.tar.gz" && \
-#  tar -xzf jdk-${JAVA_VERSION}u${JAVA_UPDATE}-linux-arm32-vfp-hflt.tar.gz && \
 RUN apt-get -y update \
   && apt-get -y install curl \
   && curl -sSL --header "Cookie: oraclelicense=accept-securebackup-cookie;" "http://download.oracle.com/otn-pub/java/jdk/${JAVA_VERSION}u${JAVA_UPDATE}-b${JAVA_BUILD}/jdk-${JAVA_VERSION}u${JAVA_UPDATE}-linux-arm32-vfp-hflt.tar.gz" | tar -xz \
