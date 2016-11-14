@@ -6,7 +6,7 @@ ENV DEBIAN_FRONTEND noninteractive
 
 # Set environment
 ENV JAVA_VERSION=8 \
-    JAVA_UPDATE=91 \
+    JAVA_UPDATE=111 \
     JAVA_BUILD=14 \
     JAVA_HOME="/opt/jdk" \
     PATH=$PATH:${PATH}:/opt/jdk/bin \
