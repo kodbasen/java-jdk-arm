@@ -1,4 +1,4 @@
-FROM kodbasen/ubuntu-slim-armhf:0.3
+FROM kodbasen/ubuntu-slim-armhf:16.04
 
 MAINTAINER larmog https://github.com/larmog
 
